@@ -1,1 +1,3 @@
-prompt("ARE WE A KICK AS TEAM?! (the answer is yes)")
+var langConverter = (function() {
+
+})()
