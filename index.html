@@ -9,30 +9,38 @@
 
   <input id="textfield" name="textfield" type="text" placeholder="Enter Language"/>
 
-    <ul>
+    <ul style="list-style: none">
         <li>Language</li>
 
-        <li style="list-style: none"><select>
-            <option value="language">
+        <li><select>
+            <option id="farsi" value="language">
                 Farsi
             </option>
 
-            <option value="language2">
+            <option id="german" value="language2">
                 German
             </option>
 
-            <option value="language3">
+            <option id="italian" value="language3">
                 Italian
             </option>
 
-            <option value="language4">
+            <option id="spanish" value="language4">
                 Spanish
+            </option>
+
+            <option id="russian" value="language5">
+                Russian
             </option>
         </select>
 
         </li>
 
     </ul>
+    <button id="translate">Tanslate</button><br>
+
+<h4>Translated Language</h4>
+    <input type="textarea" id="output" name="">
    <script type="text/javascript" src="main.js"></script>
 </body>
 </html>
