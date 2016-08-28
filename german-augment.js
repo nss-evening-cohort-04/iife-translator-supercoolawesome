@@ -1,24 +1,22 @@
-var langConverter = (function(german) {
+var LangConverter = (function(german) {
+	var englishToGerman = {
+		Merry: "Frohe",
+		Christmas: "Weihnachten",
+		And: "und",
+		Happy: "glücklich",
+		New: "neu",
+		Year: "Jahr"
+	};
 	var translatedGerman = [];
-
-	var englishToGerman = [{
-		"merry":"Frohe",
-		"christmas":"Weihnachten",
-		"and":"und",
-		"happy":"glücklich",
-		"new":"neu",
-		"year":"Jahr",
-	}];
-
 	german.getGerman = function(addedLang) {
-		for (var i = 0; i < addedLang.length; i++) {
-			translatedGerman.push(englishToGerman[addedLang[i]]);
+		 for (var prop in englishToGerman) {
+			 for (var i = 0; i < addedLang.length; i++) {
+				if (addedLang[i] === prop) {
+					translatedGerman.push(englishToGerman[prop]);
+				}
+			}
 		}
-		var finalTranslation = translatedGerman.join(" ")
-			return finalTranslation;
-		// console.log(finalTranslation)
-	}
-
-return german
-
-})(langConverter || {});
+		LangConverter.setLangConverter(translatedGerman);
+	};
+return german;
+})(LangConverter || {});
