@@ -1,31 +1,24 @@
 var LangConverter = (function(spanish) {
-  var spanishObject = {
+
+  // document.getElementById("translate").addEventListener("click", translateText);
+var englishToSpanish = {
     Merry: "Alegre",
     Christmas: "Navidad",
     and: "y",
     Happy: "Contento",
     New: "Nuevo",
-    Year: "año"
+    Year: "año",
   };
-  var translatedTo = []
-  spanish.translateToSpanish = function(addzInput) {
-
-    var addzAray = addzInput.split(" ");
-
-    for (var i = 0; i < addzInput.length; i++) {
-      console.log(addzAray[i])
-      for (var prop in spanishObject) {
-        if (addzInput[i] === prop) {
-          translatedTo.push(spanishObject[prop]);
+  var translatedSpanish = [];
+    spanish.getSpanish = function(addedLang) {
+         for (var prop in englishToSpanish) {
+             for (var i = 0; i < addedLang.length; i++) {
+                if (addedLang[i] === prop) {
+                    translatedSpanish.push(englishToSpanish[prop]);
+                }
+            }
         }
-      }
-
-    }
-    var completetranslation = addzInput.join(" ")
-    console.log(completetranslation)
-  }
-
-  return spanish
-
+        LangConverter.setLangConverter(translatedSpanish);
+    };
+return spanish;
 })(LangConverter || {});
-console.log(LangConverter)
