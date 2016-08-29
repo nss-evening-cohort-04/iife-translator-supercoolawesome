@@ -12,7 +12,7 @@ then navigate to http://localhost:9999 in your browser.
 
 ##How to translate
 
-Select a langauage from the drop down menu within the browser. Once chosen, click the submit button to translate to the langauge you have selected. The message will appear in the browser upon click of button or by clicking *'enter.'*
+Select a langauage from the drop down menu within the browser. Once chosen, click the submit button to translate to the langauge you have selected. The message will appear in the browser upon click of button or by clicking *'enter.'*If you would want to hear the what the language output sounds like click on the *Hear It* button.
 
 
 ## Contributors

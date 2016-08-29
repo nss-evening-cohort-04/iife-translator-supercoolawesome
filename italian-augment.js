@@ -1,24 +1,41 @@
-var langConverter = (function(italian) {
-  var englishToItalian= {
-  Merry:"Allegro",
-  Christmas:"Aatal",
-  And:"e",
-  Happy:"Contento",
-  New:"Nuovo",
-  Year:"Anno"
-};
- var translatedItalian = [];
-    italian.getItalian = function(addedLang) {
-         for (var prop in englishToItalian) {
-             for (var i = 0; i < addedLang.length; i++) {
-                if (addedLang[i] === prop) {
-                    translatedItalian.push(englishToItalian[prop]);
-                }
-            }
-        }
-        LangConverter.setLangConverter(translatedItalian);
+var langConverter = (function(italianConverter) {
+
+    document.getElementById("translate").addEventListener("click", translateText);
+    var translateVoice = document.getElementById("talk");
+
+    var keyPair = {
+        MERRY: "Allegro",
+        CHRISTMAS: "Aatal",
+        AND: "e",
+        HAPPY: "Contento",
+        NEW: "Nuovo",
+        YEAR: "Anno"
     };
-return italian;
-})(LangConverter || {});
 
 
+    italianConverter.translateitalian = function() {
+        var caps= document.getElementById("textfield").value.toUpperCase();
+        var translation = caps.split(" ");
+        var answer = "";
+
+        for(i=0; i<translation.length; i++) {
+          if (keyPair[translation[i]] === undefined) {
+            answer += translation[i].toLowerCase() + " ";
+        } else {
+            answer += keyPair[translation[i]]+ " ";
+        }
+
+    }
+    document.getElementById("output").innerHTML = answer;
+}
+
+function translateText() {
+  langConverter.translateitalian();
+}
+translateVoice.addEventListener('click', function(event) {
+    responsiveVoice.speak(output.innerHTML);
+});
+
+return italianConverter;
+
+})(langConverter || {});

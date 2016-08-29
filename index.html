@@ -2,30 +2,36 @@
 <html>
 <head>
     <title>Group Iffe</title>
+    <!-- <link rel="stylesheet" type="text/css" href="main.css"> -->
 </head>
-
 <body>
-   <h4>Group Iffe Project</h4>
+<header id="header">
+    <h4>Group Iffe Project</h4>
+</header>
+     <textarea id="textfield">Merry Christmas and Happy New Year</textarea>
 
-   <textarea id="textfield">Merry Christmas and Happy New Year</textarea>
+    <h3>Language</h3>
+    <ul style="list-style: none">
+        <li>
+            <select>
+                <option id="farsi">Farsi</option>
+                <option id="german">German</option>
+                <option id="italian">Italian</option>
+                <option id="spanish">Spanish</option>
+                <option id="russian">Russian</option>
+            </select>
+        </li>
+    </ul>
+    <button id="translate">Tanslate</button><br>
 
+    <div id="output">
 
-         <select id="langSelect">
-            <option>Farsi</option>
-            <option>German</option>
-            <option>Italian </option>
-            <option>Spanish</option>
-            <option>Russian</option>
-         </select>
+  </div>
 
-            <button id="translate">Translate</button>
-      <br>
-      <br>
-      <div id="output">
+    <script src='https://code.responsivevoice.org/responsivevoice.js'></script>
+<input onclick='responsiveVoice.speak("Merry Christmas and Happy New Year translated in your choice of language is ");' type='button' value=' Hear It!' id="talk" />
 
-      </div>
-
-   <script type="text/javascript" src="main.js"></script>
-   <script type="text/javascript" src="italian-augment.js"></script>
+    <script type="text/javascript" src="main.js"></script>
+    <script type="text/javascript" src="italian-augment.js"></script>
 </body>
 </html>
