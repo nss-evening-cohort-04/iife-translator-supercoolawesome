@@ -5,42 +5,27 @@
 </head>
 
 <body>
-    <h4>Group Iffe Project</h4>
+   <h4>Group Iffe Project</h4>
 
-  <input id="textfield" name="textfield" type="text" placeholder="Enter Language"/>
+   <textarea id="textfield">Merry Christmas and Happy New Year</textarea>
 
-    <ul style="list-style: none">
-        <li>Language</li>
 
-        <li><select>
-            <option id="farsi" value="language">
-                Farsi
-            </option>
+         <select id="langSelect">
+            <option>Farsi</option>
+            <option>German</option>
+            <option>Italian </option>
+            <option>Spanish</option>
+            <option>Russian</option>
+         </select>
 
-            <option id="german" value="language2">
-                German
-            </option>
+            <button id="translate">Translate</button>
+      <br>
+      <br>
+      <div id="output">
 
-            <option id="italian" value="language3">
-                Italian
-            </option>
+      </div>
 
-            <option id="spanish" value="language4">
-                Spanish
-            </option>
-
-            <option id="russian" value="language5">
-                Russian
-            </option>
-        </select>
-
-        </li>
-
-    </ul>
-    <button id="translate">Tanslate</button><br>
-
-<h4>Translated Language</h4>
-    <input type="textarea" id="output" name="">
    <script type="text/javascript" src="main.js"></script>
+   <script type="text/javascript" src="italian-augment.js"></script>
 </body>
 </html>

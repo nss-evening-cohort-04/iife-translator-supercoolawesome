@@ -18,7 +18,7 @@ var langConverter = (function(italian) {
         }
         LangConverter.setLangConverter(translatedItalian);
     };
-return german;
+return italian;
 })(LangConverter || {});
 
 
