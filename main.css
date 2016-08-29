@@ -1,11 +1,9 @@
-body {
-  background-color: lightgrey;
+img {
+  padding: 10px;
+  float: left;
 }
 
-header {
-  background-color: grey;
-  margin-left: auto;
-  margin: 0px auto;
-  position: fixed;
-  width: 100%;
+#wrapper {
+  padding-top: 130px;
 }
+

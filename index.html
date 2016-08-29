@@ -2,33 +2,48 @@
 <html>
 <head>
     <title>Group Iffe</title>
-    <!-- <link rel="stylesheet" type="text/css" href="main.css"> -->
-</head>
-<body>
-<header id="header">
-    <h4>Group Iffe Project</h4>
-</header>
-    <input id="textfield" name="textfield" type="text" placeholder="Enter Language">
+    <link rel="stylesheet" type="text/css" href="main.css">
+    <body>
 
-    <h3>Language</h3>
-    <ul style="list-style: none">
-        <li>
-            <select>
-                <option id="farsi">Farsi</option>
-                <option id="german">German</option>
-                <option id="italian">Italian</option>
-                <option id="spanish">Spanish</option>
-                <option id="russian">Russian</option>
-            </select>
-        </li>
-    </ul>
-    <button id="translate">Tanslate</button><br>
 
-    <div id="output">
-        <p type="text" x-webkit-speech>Translated Text</p>
-    </div>
 
-    <script type="text/javascript" src="main.js"></script>
-    <script type="text/javascript" src="russian.js"></script>
+   <h4>Group Iffe Project</h4>
+
+   <textarea id="textfield">Merry Christmas and Happy New Year</textarea>
+
+
+         <select id="langSelect">
+            <option>Farsi</option>
+            <option>German</option>
+            <option>Italian </option>
+            <option>Spanish</option>
+            <option>Russian</option>
+         </select>
+
+            <button id="translate">Translate</button>
+      <br>
+      <br>
+      <div id="output">
+
+      </div>
+
+   <script type="text/javascript" src="main.js"></script>
+   <script type="text/javascript" src="german-augment.js"></script>
+   <script type="text/javascript" src="russian.js"></script>
+   <script type="text/javascript" src="spanish.js"></script>
+   <script type="text/javascript" src="farsi-augmen.js"></script>
+   <script type="text/javascript" src="italian-augment.js"></script>
+
+
+<script src='https://code.responsivevoice.org/responsivevoice.js'></script>
+
+<input onclick='responsiveVoice.speak("");' type='button' value=' Hear It!' id="talk" />
+
+<script src= "http://bringto.life/n/e?key=iPAxxTzk" type="text/javascript"></script>
+
+
+</body>
+</html>
+
 </body>
 </html>

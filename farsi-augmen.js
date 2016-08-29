@@ -1,37 +1,25 @@
-// 
-// Variable to hold the final language output. Default to 0.
-// var langConverter = 0;
-// Variable to hold phrase that the user selects
-//var selectedLang;
-var langConverter = (function(converter) {
+//START LANG CONVERTER
+var LangConverter = (function(farsi) {
 
-	var farsiLang = {
-  	'merry': mobārak,
-  	'christmas': kerismas,
-  	'and': waw,
-  	'happy': mobārak,
-  	'new': no,
-  	'year': sale,
-  	'' : 0
+  var englishToFarsi = {
+    Merry: "mobārak",
+    Christmas: "kerismas",
+    and: "waw",
+    Happy: "mobārak",
+    New: "no",
+    Year: "sale"
  };
+ var translatedFarsi = [];
+    farsi.getFarsi = function(addedLang) {
+         for (var prop in englishToFarsi) {
+             for (var i = 0; i < addedLang.length; i++) {
+                if (addedLang[i] === prop) {
 
- // Augment the original object with another method
- converter.setFarsi = function(newFarsi) {
-    return farsiLang[newFarsi];
-  };
- 
- // Return the new, augmented object with the new method on it
-  return converter;
-})(langConverter);
-
-//return {
-// farsiConvert: farsiTranslate();
-// getFarsiLang: function()
-// return farsiLang;
-// },
-
-// setFarsiLang: function(newFarsi){
-	// farsiLang = newFarsi;
-// },
-// };
-// })(langConverter || {});
+                    translatedFarsi.push(englishToFarsi[prop]);
+                }
+            }
+        }
+        LangConverter.setLangConverter(translatedFarsi);
+    };
+return farsi;
+})(LangConverter || {});

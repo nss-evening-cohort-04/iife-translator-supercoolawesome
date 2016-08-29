@@ -1,40 +1,28 @@
-var langConverter = (function(russianConverter) {
+var LangConverter = (function(russian) {
 
-    document.getElementById("translate").addEventListener("click", translateText);
+    // document.getElementById("translate").addEventListener("click", translatedRussian);
 
-    var keyPair = {
-        HAVE: "иметь",
-        A: "a",
-        MERRY: "веселый",
-        CHRISTMAS: "рождество",
-        AND: "а также",
-        A: "a",
-        HAPPY: "счастливый",
-        NEW: "новый",
-        YEAR: "год"
+    var englishToRussian = {
+        Have: "иметь",
+        Merry: "веселый",
+        Christmas: "рождество",
+        And: "а также",
+        Happy: "счастливый",
+        New: "новый",
+        Year: "год"
     };
-    console.log(keyPair);
 
-    russianConverter.translateRussian = function() {
-        var caps= document.getElementById("textfield").value.toUpperCase();
-        var translation = caps.split(" ");
-        var answer = "";
-
-        for(i=0; i<translation.length; i++) {
-          if (keyPair[translation[i]] === undefined) {
-            answer += translation[i].toLowerCase() + " ";
-        } else {
-            answer += keyPair[translation[i]]+ " ";
+    var translatedRussian = [];
+  russian.getRussian = function(addedLang) {
+     for (var prop in englishToRussian) {
+       for (var i = 0; i < addedLang.length; i++) {
+        if (addedLang[i] === prop) {
+          translatedRussian.push(englishToRussian[prop]);
         }
-
+      }
     }
-    document.getElementById("output").innerHTML = answer;
-}
+    LangConverter.setLangConverter(translatedRussian);
+  };
+return russian;
 
-function translateText() {
-  langConverter.translateRussian();
-}
-
-return russianConverter;
-
-})(langConverter || {});
+})(LangConverter || {});
