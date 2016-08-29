@@ -1,25 +1,24 @@
-var global = " "
-
-
-var langConverter = (function(translate) {
-  var converterObj ={
-  "merry" : "allegro",
-  "christmas" : "natal",
-  "god" : "dio",
-  "and" : "e",
-  "happy" : "contento",
-  "new" : "nuovo",
-  "year" : "anno"
-
-    newItalian.getconverterObj = function(){
-      return converterObj;
+var langConverter = (function(italian) {
+  var englishToItalian= {
+  Merry:"Allegro",
+  Christmas:"Aatal",
+  And:"e",
+  Happy:"Contento",
+  New:"Nuovo",
+  Year:"Anno"
+};
+ var translatedItalian = [];
+    italian.getItalian = function(addedLang) {
+         for (var prop in englishToItalian) {
+             for (var i = 0; i < addedLang.length; i++) {
+                if (addedLang[i] === prop) {
+                    translatedItalian.push(englishToItalian[prop]);
+                }
+            }
+        }
+        LangConverter.setLangConverter(translatedItalian);
     };
-    newItalian.setconverterObj = function(change){
-    converterObj.push(change);
-    };
-}
+return german;
+})(LangConverter || {});
 
-})( langConverter || {});
-
-console.log(langConverter.getconverterObj);
 
